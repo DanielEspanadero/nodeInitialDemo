@@ -8,4 +8,4 @@ const router = Router();
 
 router.post('/', upload, uploadPost);
 
-module.exports = router; 
+module.exports = router;
