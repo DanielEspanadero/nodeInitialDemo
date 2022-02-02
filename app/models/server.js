@@ -5,7 +5,9 @@ class Server {
     constructor() {
         this.app = express();
         this.port = process.env.PORT;
+
         this.usersPath = '/user';
+        this.uploadPath = '/upload';
 
         // Middlewares
         this.middlewares();
@@ -23,7 +25,8 @@ class Server {
     };
 
     routes() {
-        this.app.use(this.usersPath, require('../routes/user.routes'));
+        this.app.use(this.usersPath, require('../routes/user'));
+        this.app.use(this.uploadPath, require('../routes/upload'));
     };
 
     listen() {
