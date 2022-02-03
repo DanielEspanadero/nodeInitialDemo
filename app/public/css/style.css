@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    user-select: none;
+}
+#nav{
+    display:flex;
+    position: fixed;
+    z-index: 100;
+    background-color: #fff;
+    width: 100vw;
+    height: 4em;
+    border-bottom: 1px solid black;
+}
+
+#nav-img{
+    margin: .5em 0 .5em 2em;
+    width:12em;
+}
+
+#nav > ul > a :hover{
+    transition: all .5s;
+    color: #f0f;
+}
+
+#nav > ul{
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 2em;
+    width: 100vw;
+}
+.links{
+    display: inline-block;
+    font-size: 2em;
+    line-height: 2em;
+    margin-right: 1em;
+}
+
+.text1{
+    color: #d7137f;
+}
