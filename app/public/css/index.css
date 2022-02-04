@@ -1,9 +1,39 @@
-#main{
-    position: absolute;
+#node{
+    width: 10em;
+    animation: node 10s infinite alternate-reverse linear;
 }
 
-.title{
-    margin-top: 2em;
-    font-size: 3em;
-    text-align: center;
+@keyframes node {
+    0%{
+        margin-left:5vw;
+    }
+    100%{
+        margin-left: 80vw;
+    }
+}
+
+#postman{
+    display: block;
+    width:40em;
+    margin: 0 auto;
+}
+
+#estructura{
+    margin-top: 1em;
+}
+
+#models{
+    color:#f00;
+}
+
+#controllers{
+    color: #ffc107;
+}
+
+#routes{
+    color: #43a047;
+}
+
+#middlewares{
+    color:#5c6bc0;
 }

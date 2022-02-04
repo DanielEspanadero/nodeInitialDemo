@@ -1,0 +1,23 @@
+#json{
+    display: block;
+    width: 40em;
+    margin:0 auto;
+}
+
+#user{
+    color: #f00;
+    text-decoration: underline;
+}
+
+#user:hover{
+    color: #00f;
+}
+
+#jsonView{
+    color: #ffc107;
+    text-decoration: underline;
+}
+
+#jsonView:hover{
+    color: #f00
+}
