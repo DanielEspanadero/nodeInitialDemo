@@ -21,9 +21,10 @@ const upload = app.use(multer({
         var extname = filetypes.test(path.extname(file.originalname).toLowerCase());
 
         if (mimetype && extname) {
+            console.log(req.file)
             return cb(null, true);
         }
-        cb('Error: File upload only supports the following filetypes jpg, png and gif');
+            cb('Error: La càrrega de fitxers només admet els tipus de fitxer jpg, png and gif.');
     },
 }).single('image'));
 

@@ -1,0 +1,30 @@
+#main{
+    width: 100vw;
+    height:100vh;
+    background-image: url('../assets/images/astronauta.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#main > h1{
+    position: fixed;
+    font-size: 3em;
+    font-family:'Helvetica', Arial, sans-serif;
+    text-shadow: 4px 4px #000;
+    color: #fff;
+    margin-left: 2em;
+}
+
+#main > img{
+    margin: 3em 0 0 -35vw;
+    animation: nau 8s;
+}
+
+@keyframes nau {
+    from{
+        margin-left: -35vw;
+    }
+    to{
+        margin-left: 120vw;
+    }
+}

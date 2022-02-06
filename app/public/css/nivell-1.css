@@ -4,12 +4,12 @@
     margin:0 auto;
 }
 
-#user{
+.link{
     color: #f00;
     text-decoration: underline;
 }
 
-#user:hover{
+.link:hover{
     color: #00f;
 }
 

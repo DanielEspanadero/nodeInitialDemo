@@ -5,9 +5,7 @@ const uploadGet = (req, res) => {
 }
 
 const uploadPost = (req, res) => {
-    res.json({
-        msg: 'Archivo enviado'
-    })
+    res.sendFile(path.join(`${__dirname}../../public/html/uploaded.html`));
 };
 
 module.exports = {
