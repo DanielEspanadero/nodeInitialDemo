@@ -1,7 +1,7 @@
 const { dateAndTime } = require('../models/dateAndTime');
 
 const timePost = (req, res) => {
-    res.json({
+    res.status(200).json({
         'date': dateAndTime('date'),
         'time': dateAndTime('time'),
     });
