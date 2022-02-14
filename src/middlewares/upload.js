@@ -1,6 +1,5 @@
 const express = require('express');
 const multer = require('multer');
-const path = require('path');
 
 const app = express();
 
@@ -14,7 +13,7 @@ const storage = multer.diskStorage({
 
 const upload = app.use(multer({
     storage,
-        fileFilter: function (req, file, cb) {
+    fileFilter: function (req, file, cb) {
 
         var filetypes = /jpg|png|gif/;
         var mimetype = filetypes.test(file.mimetype);
@@ -24,7 +23,7 @@ const upload = app.use(multer({
             console.log(req.file)
             return cb(null, true);
         }
-            cb('Error: La càrrega de fitxers només admet els tipus de fitxer jpg, png and gif.');
+        cb('Error: La càrrega de fitxers només admet els tipus de fitxer jpg, png and gif.');
     },
 }).single('image'));
 

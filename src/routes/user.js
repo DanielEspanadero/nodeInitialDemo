@@ -1,8 +1,8 @@
 const { Router } = require('express');
-const { nivell1Get } = require('../controllers/nivell1');
+const { userGet } = require('../controllers/user');
 
 const router = Router();
 
-router.get('/', nivell1Get);
+router.get('/', userGet);
 
 module.exports = router;
