@@ -1,4 +1,4 @@
-const dateAndTime = option => {
+export const dateAndTime = option => {
 
     let format;
 
@@ -13,6 +13,4 @@ const dateAndTime = option => {
         break;
     }
     return new Date().toLocaleString('es-ES', format)
-}
-
-module.exports = { dateAndTime };
+};

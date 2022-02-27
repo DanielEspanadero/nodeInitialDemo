@@ -1,5 +1,9 @@
-const express = require('express');
-require('dotenv').config();
+import express from 'express';
+import 'dotenv/config';
+
+import user from '../routes/user';
+import upload from '../routes/upload';
+import time from '../routes/time';
 
 class Server {
     constructor() {
@@ -13,9 +17,9 @@ class Server {
     };
 
     route() {
-        this.app.use(this.userPath, require('../routes/user'));
-        this.app.use(this.uploadPath, require('../routes/upload'));
-        this.app.use(this.timePath, require('../routes/time'));
+        this.app.use(this.userPath, user);
+        this.app.use(this.uploadPath, upload);
+        this.app.use(this.timePath, time);
     };
 
     listen() {
@@ -25,5 +29,4 @@ class Server {
     };
 };
 
-
-module.exports = Server;
+export default Server;

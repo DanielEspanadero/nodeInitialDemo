@@ -1,8 +1,6 @@
-const { request, response } = require('express');
+import { request, response } from 'express';
 
-const cacheControl = (req, res, next) => {
+export const cacheControl = (req, res, next) => {
     res.header('Cache-control', 'no-cache');
     next()
-}
-
-module.exports = { cacheControl };
+};

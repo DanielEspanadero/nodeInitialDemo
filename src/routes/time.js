@@ -1,10 +1,11 @@
-const { Router } = require('express');
-const cors = require('cors');
+import { Router } from 'express';
+import cors from 'cors';
 
-const { timePost } = require('../controllers/time');
-const { cacheControl } = require('../middlewares/cache-control');
+import { timePost } from '../controllers/time';
+import { cacheControl } from '../middlewares/cache-control';
+
 const router = Router();
 
-router.post('/',cors(), cacheControl, timePost);
+router.post('/', cors(), cacheControl, timePost);
 
-module.exports = router;
+export default router;
