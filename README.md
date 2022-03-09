@@ -6,7 +6,10 @@ La forma que utilizo para crear y organizar el servidor es express basado en cla
 En la carpeta 'models' es donde se encuentra la lógica del servidor y los controladores, las rutas y los middlewares los guardo en sus carpetas correspondientes.
 
 ## 🔐 Crear variables de entorno
-En config.env voy definiendo las variables de entorno que hay que crear en el archivo .env
+En .config.env voy definiendo las variables de entorno que hay que crear en el archivo .env.
+
+## 💻 Postman
+En el directorio principal del proyecto dispones de un archivo en formato JSON con todas las configuraciones de postman relaizadas.
 
 ## NIVELL 1 ⭐️
 
