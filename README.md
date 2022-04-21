@@ -1,50 +1,40 @@
+# 🧑🏻‍💻 Entrega 4.1: Node REST Server
 
-# Node Initial Project
+## ⚠️ Antes de empezar
+Recuerda que antes de ejecutar el proyecto tienes que instalar todas las dependencias necesarias, para ello has de introducir el siguiente comando:
+```
+npm install
+```
 
-### Project Structure
+## ⚙️ Inicio del proyecto
 
-Main structure of node.js project. Folders / files:
+Los comandos necesarios para arrancar el proyecto son los siguientes:
+(Modo producción)
+```
+npm start
+```
+(Modo desarrollo)
+```
+npm run dev
+```
 
-- <b>\_\_tests__</b>. Tests folder. See [Jest Docs](https://jestjs.io/es-ES/docs/configuration) and [Chai Docs](https://www.chaijs.com/)
-- <b>app</b>:
-    - <b>config</b>
-    - <b>controllers</b>
-    - <b>crons</b>
-    - <b>middleware</b>
-    - <b>models</b>
-    - <b>routes</b>
-    - <b>tmp</b>
-    - <b>app.js</b>. Entry point.
-- <b>.env</b>. Environment descriptor. See [dotenv doc](https://www.npmjs.com/package/dotenv).
-- <b>.eslintrc</b>. Linter JS, static code analyzer. See [EsLint Docs](https://eslint.org/docs/user-guide/configuring/configuration-files).
-- <b>.prettierignore</b>. Code formatter. See [Prettier Config](https://prettier.io/docs/en/configuration.html) and [Prettier Ignore](https://prettier.io/docs/en/ignore.html).
-- <b>.ecosystem.config.js</b>. Process Manage at runtime. See [PM2 Docs](https://pm2.keymetrics.io/).
-- <b>package.json</b>.
+## 🏛 Estructura del proyecto
 
-### Import project for use with WebStorm
+La forma que utilizo para crear y organizar el servidor es express basado en clases ya que considero que es más sencillo de escalar y de mantener el código relativamente ordenado.
+En la carpeta 'models' es donde se encuentra la lógica del servidor y los controladores, las rutas y los middlewares los guardo en sus carpetas correspondientes.
 
-Follow the steps below:
-* Clone the project from the Github Platform. Execute:
-  ```
-  git clone [url project]
-  ```
-* Open the project downloaded.
-![Open Project](img/webstorm_open.png)
+## 🔐 Crear variables de entorno
+En .config.env voy definiendo las variables de entorno que hay que crear en el archivo .env.
 
+## 💻 Postman
+En el directorio principal del proyecto dispones de un archivo en formato JSON con todas las configuraciones de postman relaizadas.
 
-### Import project for use with Visual Studio Code
+## NIVELL 1 ⭐️
 
-Follow the steps below:
-* Clone the project from the Github Platform. Execute:
-  ```
-  git clone [url project]
-  ```
-* Open the project downloaded.
-  ![Open Project](img/VSC_open.png)
+### 📌 EJERCICIO 1
 
+En el propio navegador o en postman ir a la ruta /user y se mostrará por consola un JSON con mi nombre, edad y la url desde la que se está ejecutando.
 
-### Utilities
+### 📌 EJERCICIO 2
 
-* [Node Developers Guide](https://nodejs.dev/learn)
-* **.gitignore file** configuration. See [Official Docs](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files).
-* **Git branches**. See [Official Docs](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+En Postman hacemos un POST de la ruta /upload y para probar a subir archivos en jpeg, jpg, png o gif, en body > form-data ejecutamos la key con el nombre 'image'.
