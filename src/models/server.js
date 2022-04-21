@@ -4,6 +4,7 @@ import 'dotenv/config';
 import user from '../routes/user';
 import upload from '../routes/upload';
 import time from '../routes/time';
+import error404 from '../routes/404';
 
 class Server {
     constructor() {
@@ -12,7 +13,8 @@ class Server {
 
         this.userPath = '/user';
         this.uploadPath = '/upload';
-        this.timePath = '/time'
+        this.timePath = '/time';
+        this.error404 = '*';
         this.route();
     };
 
@@ -20,6 +22,7 @@ class Server {
         this.app.use(this.userPath, user);
         this.app.use(this.uploadPath, upload);
         this.app.use(this.timePath, time);
+        this.app.use(this.error404, error404);
     };
 
     listen() {
