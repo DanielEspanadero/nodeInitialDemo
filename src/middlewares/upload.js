@@ -28,13 +28,15 @@ export const upload = (req, res, next) => {
     }).single('image')(req, res, (err) => {
 
         // File size error
-        if (err instanceof multer.MulterError) return res.status(500).end('Max file size 2MB allowed!');
+        if (err instanceof multer.MulterError) return res.status(500).json('Max file size 2MB allowed!');
 
         // Invalid file type, message will return from fileFilter callback
-        if (err) return res.status(500).end(err.message);
+        if (err) return res.status(500).json(err.message);
 
         // File not selected
-        if (!req.file) return res.status(500).end('File is required!');
+        if (!req.file) return res.status(500).json({
+            msg: 'File is required!'
+        });
 
         // Success
         next();

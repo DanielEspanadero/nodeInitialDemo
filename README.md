@@ -1,5 +1,23 @@
 # 🧑🏻‍💻 Entrega 4.1: Node REST Server
 
+## ⚠️ Antes de empezar
+Recuerda que antes de ejecutar el proyecto tienes que instalar todas las dependencias necesarias, para ello has de introducir el siguiente comando:
+```
+npm install
+```
+
+## ⚙️ Inicio del proyecto
+
+Los comandos necesarios para arrancar el proyecto son los siguientes:
+(Modo producción)
+```
+npm start
+```
+(Modo desarrollo)
+```
+npm run dev
+```
+
 ## 🏛 Estructura del proyecto
 
 La forma que utilizo para crear y organizar el servidor es express basado en clases ya que considero que es más sencillo de escalar y de mantener el código relativamente ordenado.
