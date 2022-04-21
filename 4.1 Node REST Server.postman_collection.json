@@ -48,6 +48,23 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Endpoint TIME",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{rest}}/time",
+					"host": [
+						"{{rest}}"
+					],
+					"path": [
+						"time"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
